@@ -1,0 +1,282 @@
+html {
+  font-size: 16px;
+  font-family: 'Ubuntu', 'Verdana', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-container {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.menu {
+  float: right;
+}
+
+.menu li {
+  display: inline-block;
+  position: relative;
+  font-size: 1.3rem;
+}
+
+.menu li.dropdown:hover > .submenu {
+  display: block;
+}
+
+.menu li a {
+  color: white;
+  display: block;
+  padding: 1.5rem 3rem;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.menu li a:hover {
+  background: rgba(0,0,0,0.5);
+}
+
+.menu .submenu {
+  display: none;
+}
+
+.submenu {
+  display: block;
+  left: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 200px;
+}
+
+.submenu li {
+  display: block;
+}
+
+.submenu li a {
+  background: #999;
+  color: #fff;
+  display: block;
+  margin-bottom: 1px;
+  padding: 8px 6px;
+}
+
+.menu .submenu .submenu {
+  left: 200px;
+  position: absolute;
+  top: 0px;
+}
+
+.menu-container.is-scrolled {
+  background-color: #fff;
+  box-shadow: 1px 0px 9px #3c3c3c;
+}
+
+.menu-container.is-scrolled .menu li a {
+  color: #333;
+}
+
+.logo {
+    color: #fff;
+    font-size: 2rem;
+    line-height: 4.5rem;
+    display: inline-block;
+}
+
+.menu-container.is-scrolled .logo {
+  color: #333;
+}
+.bg-image {
+  background-image: url(images/bg-home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-dark {
+  background-color: #242424;
+}
+
+.bg-dark > .section-title {
+  color: #fff;
+}
+.home {
+  min-height: 80vh;
+  background-attachment: fixed;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;  
+}
+
+.home-title-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-title {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.home-title .yellow {
+  color: yellow;
+}
+
+.projects {
+  padding: 2rem;
+}
+
+.project-list-container {
+  position: relative;
+  height: 30rem;
+}
+
+.project-list-arrow {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+    text-align: center;
+  z-index: 1;
+  width: 10%;
+  background: linear-gradient(to right, #333, rgba(0,0,0,0.01));
+  color: #333;
+  transition: opacity 0.3s;
+}
+
+.project-list-arrow.right {
+  left: auto;
+  right: 0;
+  transform: rotateY(180deg);
+}
+.project-list-arrow > .arrow {
+  font-size:  4rem;
+  display: inline-block;
+  color: #fff;
+  margin-top: 100%;
+  transition: transform 0.2s;
+}
+.project-list-arrow:hover > .arrow {
+  transform: scale(1.3);
+}
+.project-list-container:hover .project-list-arrow {
+  opacity: 1;
+}
+.project-list {
+  list-style: none;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.project-list > li {
+    background-color: #fff;
+    height: 94%;
+    margin-top: 12px;
+    width: 25%;
+    display: inline-block;
+    position: relative;
+    white-space: initial;
+    margin-bottom: 3rem;
+    box-shadow: 2px 3px 19px #000;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-list > li:hover {
+  transform: scale(1.03);
+}
+
+.project-list > li:nth-child(even) {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.project-item {
+  display: block;
+}
+
+.project-item__image {
+  height: 50%;
+}
+
+.project-item__content {
+  padding: 0 2rem;
+}
+
+.project-item__title {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+
+.project-item__button {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+.section-title.center {
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.section-content {
+  border-left: 3px solid blue;
+  padding-left: 2rem; 
+}
+
+.inner-col {
+  min-height: 60vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;  
+  justify-content: center;
+}
+
+.col-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.col-two > .inner-col {
+  max-width: 50%;
+
+}
